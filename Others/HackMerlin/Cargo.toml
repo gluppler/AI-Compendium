@@ -1,0 +1,17 @@
+[package]
+name = "hackmerlin"
+version = "0.1.0"
+edition = "2021"
+description = "Rust solver for HackMerlin.io — prompt injection CTF"
+
+[dependencies]
+clap = { version = "4", features = ["derive", "env"] }
+reqwest = { version = "0.12", features = ["blocking", "cookies"] }
+regex = "1"
+rand = "0.8"
+base64 = "0.22"
+serde_json = "1"
+log = "0.4"
+env_logger = "0.11"
+pocs = { path = "../PoCs" }
+dotenv = "0.15"
