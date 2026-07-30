@@ -1,0 +1,12 @@
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+chromadb>=0.5.0
+tiktoken>=0.7.0
+beautifulsoup4>=4.12.0
+numpy>=1.24.0
+requests>=2.31.0
+# Optional:
+# ragatouille  # for ColBERT (lesson 14)
+# cohere       # for Cohere re-rank (lesson 15)
+# langgraph    # for CRAG / Self-RAG (lessons 16-17)

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "llm-with-reasoning"
+version = "0.1.0"
+description = "GPT and Qwen3-style transformer models from scratch"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.7.1",
+    "tiktoken>=0.7",
+    "tokenizers>=0.21.2",
+    "sympy>=1.14.0",
+    "requests>=2.31",
+    "numpy>=1.24",
+]
+
+[project.scripts]
+llm-model = "llm_model:main"
+reasoning-model = "reasoning_model:main"
+unified-model = "unified_model:main"
+finetune = "finetune:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = []
