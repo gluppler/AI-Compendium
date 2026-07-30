@@ -1,0 +1,31 @@
+[project]
+name = "neural-network-from-scratch"
+version = "1.0.0"
+description = "A modular neural network built from scratch with NumPy"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+# numpy's type stubs are imprecise — common ops like np.exp, @ return Any.
+# Disabling warn_return_any avoids 7+ false positives on valid code.
+warn_return_any = false
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
